@@ -6,81 +6,93 @@
 <title>Elio | Profile</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-font-family:Arial,sans-serif;
-background:#0f172a;
-color:white;
+html {
+  scroll-behavior: smooth;
 }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-background:rgba(0,0,0,.6);
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:15px;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,.7);
 }
 
-section{
-max-width:900px;
-margin:auto;
-padding:100px 20px;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
 }
 
-.hero{
-padding-top:150px;
-text-align:center;
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px;
 }
 
-.hero h1{
-font-size:55px;
+.hero {
+  padding-top: 150px;
+  text-align: center;
 }
 
-.hero p{
-color:#94a3b8;
-margin-top:10px;
+.hero h1 {
+  font-size: 56px;
 }
 
-.card{
-background:rgba(255,255,255,.05);
-padding:25px;
-border-radius:15px;
-margin-top:20px;
+.hero p {
+  color: #94a3b8;
+  margin-top: 10px;
 }
 
-h2{
-color:#38bdf8;
-margin-bottom:10px;
+.card {
+  background: rgba(255,255,255,.05);
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 20px;
 }
 
-button{
-padding:10px 16px;
-border:none;
-border-radius:8px;
-background:#38bdf8;
-color:white;
-cursor:pointer;
-margin-top:15px;
+h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
 }
 
-footer{
-text-align:center;
-padding:30px;
-color:#94a3b8;
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+#quote {
+  margin-top: 15px;
+  color: #facc15;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
 }
 </style>
 </head>
@@ -88,58 +100,58 @@ color:#94a3b8;
 <body>
 
 <nav>
-<div><b>Elio</b></div>
-<div>
-<a href="#about">About</a>
-<a href="#tennis">Tennis</a>
-<a href="#goals">Goals</a>
-</div>
+  <div><strong>Elio</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#tennis">Tennis</a>
+    <a href="#goals">Goals</a>
+  </div>
 </nav>
 
 <section class="hero">
-<h1>Elio</h1>
-<p>Student • Athlete • Growth Focused</p>
-<button onclick="motivate()">Motivate Me</button>
-<p id="quote"></p>
+  <h1>Elio</h1>
+  <p>Student • Athlete • Growth Focused</p>
+  <button onclick="motivate()">Motivate Me</button>
+  <p id="quote"></p>
 </section>
 
 <section id="about">
-<h2>About Me</h2>
-<div class="card">
-Focused on school, tennis, discipline, and building a strong future.
-</div>
+  <h2>About Me</h2>
+  <div class="card">
+    Focused on school, discipline, growth, and building a strong future.
+  </div>
 </section>
 
 <section id="tennis">
-<h2>Tennis</h2>
-<div class="card">
-Competitive player who loves training, improvement, and performance.
-</div>
+  <h2>Tennis</h2>
+  <div class="card">
+    Competitive player who loves training, gear, and improving daily.
+  </div>
 </section>
 
 <section id="goals">
-<h2>Goals</h2>
-<div class="card">
-Improve daily. Stay disciplined. Win long term.
-</div>
+  <h2>Goals</h2>
+  <div class="card">
+    Improve every day. Stay disciplined. Win long term.
+  </div>
 </section>
 
 <footer>
-Built by Elio 🚀
+  Built by Elio 🚀
 </footer>
 
 <script>
-function motivate(){
-const quotes = [
-"Discipline beats motivation.",
-"Pressure builds champions.",
-"Consistency wins.",
-"Small steps become big results.",
-"Future you is watching."
-];
+function motivate() {
+  const quotes = [
+    "Discipline beats motivation.",
+    "Pressure builds champions.",
+    "Consistency wins.",
+    "Future you is watching.",
+    "Small wins stack up."
+  ];
 
-document.getElementById("quote").innerText =
-quotes[Math.floor(Math.random()*quotes.length)];
+  const random = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerText = quotes[random];
 }
 </script>
 
